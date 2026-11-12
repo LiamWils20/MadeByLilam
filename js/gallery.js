@@ -60,7 +60,7 @@ const gallery = [
       category: ["Website"],
       link: "https://voidtimer.github.io/VoidTimer/",
       released: "Jul 18, 2025",
-      cover: "images/Gallery/VoidTimer Webpage.png",
+      cover: "images/Gallery/VoidTimer Webpage.PNG",
     },
 
     // Wheel Randomiser Example
