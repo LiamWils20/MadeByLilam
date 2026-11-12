@@ -1,0 +1,612 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>MadeByLilam</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        
+        <link rel="icon" href="images/logo.jpg">
+        <link rel="stylesheet" href="CSS/Style.css">
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Coiny&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <div class="frame">
+            
+
+            <header>
+                <div class="logo-mark">
+                    <div class="logo-title-merged">
+                        <a href="index.html" class="logo-icon-link"><div class="logo-icon"><img src="images/logo.jpg" alt="Logo"></div></a>
+                        <div class="logo-title-copy">
+                            <div class="logo-text-main">MadeByLilam</div>
+                            <div class="logo-text-sub"> Liam · Website Designer | Game Developer | 3D Printer</div>
+                        </div>
+                    </div> <!-- logo-title-merged -->
+                </div> <!-- logo-mark -->
+
+                <nav>
+                    <a href="Index.html">Home</a>
+                    <a href="About.html">About</a>
+                    <a href="Contact.html">Contact</a>
+                </nav>
+            </header>
+
+            <aside class="special-event-banner" id="specialEventBanner">
+                <div class="special-event-copy">
+                    <strong>BLACK FRIDAY SPECIAL</strong>
+                    <span id="specialEventMessage">Enjoy our current discounts while they last.</span>
+                </div>
+                <div class="special-event-countdown">
+                    <span id="specialEventCountdownLabel">Offer ends in</span>
+                    <span id="specialEventCountdown" role="timer" aria-label="Time remaining in the Black Friday offer"></span>
+                </div>
+            </aside>
+
+            <project>
+                <h1 style="padding-left: 70px;">!! Our Services !!</h1>
+
+                <div class="services-row">
+                    <div class="services-column">
+                        <div class="services-card">
+                            <img src="images/Website Services.png" alt="Website Services" class="service-modal" id="openWebsiteModal" data-price-id="websiteServices">
+                        </div>
+                    </div>
+                    
+                    <div class="services-column">
+                        <div class="services-card">
+                            <img src="images/Game-Dev Services.png" alt="Game Development" class="service-modal" id="openGameDevModal" data-price-id="gameDevServices">
+                        </div>
+                    </div>
+
+                    <div class="services-column">
+                        <div class="services-card">
+                            <img src="images/Printing Services.png" alt="3D Printing" class="service-modal" id="openPrintingModal" data-price-id="printingServices">
+                        </div>
+                    </div>
+                </div>
+            </project>
+
+            <div class="connect-section" id="contact">
+                <h2 class="section-title">Online <span class="purple-effect">Order</span> Form</h2>
+                <p>At the moment, this is how I will be taking orders. <br>
+                    Within 24 hours of you filling in this form, an invoice / payment link will be sent to the email you provided. </p>
+
+                <p>Once payment has been recieved, your order will be fulfilled within an estimated window of 3 days up to 3 weeks, <br>
+                    depending on the package purchased. </p>
+                
+                <p>Refunds are only permitted before you are sent the website or game files. 
+                    <br> This is because once you have the files it's impossible to ensure the files are deleted permenantly </p>
+
+                <form action="https://formsubmit.co/lilamlagged@gmail.com" method="post">
+                    <label>Your Name *<input name="Name" required></label>
+                    <label>Your Email *<input name="email" required></label>
+                    <label>Phone Number (Optional)<input name="Phone"></label>
+                    <label>Type of Order 
+                        <select name="Order type" id="orderType">
+                            <option value="website">Website Services</option>
+                            <option value="game-dev">Game-Dev Services</option>
+                            <option value="printing">3D Printing Services</option>
+                        </select>
+                    </label>
+
+                    <!-- #region Website Order Form Section -->
+                    <fieldset data-order-type="website">
+                        <label>Package Type
+                            <select name="Package Type">
+                                <option data-price-id="websiteStarter"></option>
+                                <option data-price-id="websiteBasic"></option>
+                                <option data-price-id="websiteUltimate"></option>
+                            </select>
+                        </label>
+                        <br> <br>
+                        <label>Extras</label>
+                            <label class="checkbox-option">
+                                <input type="checkbox" name="Additional Page" value="Additional Page" data-price-id="websiteAdditionalPage">
+                                <span data-price-label="websiteAdditionalPage"></span>
+                            </label>
+
+                            <label class="checkbox-option">
+                                <input type="checkbox" name="Additional Revision" value="Additional Revision" data-price-id="websiteAdditionalRevision">
+                                <span data-price-label="websiteAdditionalRevision"></span>
+                            </label>
+
+                            <label class="checkbox-option">
+                                <input type="checkbox" name="Gallery Section" value="Gallery Section" data-price-id="websiteGallery">
+                                <span data-price-label="websiteGallery"></span>
+                            </label>
+
+                            <label class="checkbox-option">
+                                <input type="checkbox" name="Monthly Maintenance" value="Monthly Maintenance" data-price-id="websiteMaintenance">
+                                <span data-price-label="websiteMaintenance"></span>
+                            </label>
+
+                            <br>
+                            
+                            <label> Your Website Information, such as Business Details, Contact Information, Opening Times, Address Etc. 
+                                <textarea name="Text1" cols="40" rows="5"></textarea>
+                            </label>
+                        
+                    </fieldset>
+                    <!-- #endregion Website Order Form Section -->
+
+                    <!-- #region Game-Dev Order Form Section -->
+                    <fieldset data-order-type="game-dev">
+                        <label>Package Type
+                            <select name="Package Type">
+                                <option data-price-id="gameFixer"></option>
+                                <option data-price-id="gameBuilder"></option>
+                                <option data-price-id="gameCreator"></option>
+                                <option>None of the Above | Select this, if you want a mini-package</option>
+                            </select>
+                        </label>
+
+                        <br> <br>
+
+                        <label>Mini Packages</label>
+                            <label class="checkbox-option">
+                                <input type="checkbox" name="Small C# Script Modification" value="Small C# Script Modification" data-price-id="gameSmallScript">
+                                <span data-price-label="gameSmallScript"></span>
+                            </label>
+
+                            <label class="checkbox-option">
+                                <input type="checkbox" name="Unity UI Implementation" value="Unity UI Implementation" data-price-id="gameUnityUI">
+                                <span data-price-label="gameUnityUI"></span>
+                            </label>
+
+                            <label class="checkbox-option">
+                                <input type="checkbox" name="Health System Implementation" value="Health System Implementation" data-price-id="gameHealthSystem">
+                                <span data-price-label="gameHealthSystem"></span>
+                            </label>
+
+                            <label class="checkbox-option">
+                                <input type="checkbox" name="Inventory System Implementation" value="Inventory System Implementation" data-price-id="gameInventory">
+                                <span data-price-label="gameInventory"></span>
+                            </label>
+
+                            <label class="checkbox-option">
+                                <input type="checkbox" name="Character Controller" value="Character Controller" data-price-id="gameCharacterController">
+                                <span data-price-label="gameCharacterController"></span>
+                            </label>
+
+                            <label class="checkbox-option">
+                                <input type="checkbox" name="Basic Enemy AI" value="Basic Enemy AI" data-price-id="gameEnemyAI">
+                                <span data-price-label="gameEnemyAI"></span>
+                            </label>
+
+                            <label class="checkbox-option">
+                                <input type="checkbox" name="Save / Load System" value="Save / Load System" data-price-id="gameSaveLoad">
+                                <span data-price-label="gameSaveLoad"></span>
+                            </label>
+
+                            <label class="checkbox-option">
+                                <input type="checkbox" name="Gameplay Mechanic Implementation" value="Gameplay Mechanic Implementation" data-price-id="gameGameplayMechanic">
+                                <span data-price-label="gameGameplayMechanic"></span>
+                            </label>
+
+                            <label class="checkbox-option">
+                                <input type="checkbox" name="Project Playtest / Debugging Session" value="Project Playtest / Debugging Session" data-price-id="gameProjectDebugging">
+                                <span data-price-label="gameProjectDebugging"></span>
+                            </label>
+
+                            <label class="checkbox-option">
+                                <input type="checkbox" name="Code Review and Optimisation" value="Code Review and Optimisation" data-price-id="gameCodeReview">
+                                <span data-price-label="gameCodeReview"></span>
+                            </label>
+                    </fieldset>
+                    <!-- #endregion Game-Dev Order Form Section -->
+                    
+                    <!-- #region 3D Printing Order Form Section -->
+                    <fieldset data-order-type="printing">
+                        <label>Type of Order 
+                            <select name="Order type" id="orderType">
+                                <option value="website" data-price-label="printMyModel">Print My Modal</option>
+                                <option value="game-dev" data-price-label="customiseMyModel">Customise My Modal</option>
+                                <option value="printing" data-price-label="createMyModel">Create My Modal</option>
+                            </select>
+                        </label>
+
+                        <br> <br>
+                        <label>Print / Customise My Modal File Upload</label>
+                        <input type="file" id="myFile" name="filename">
+
+                        <br> <br>
+                        <label> Create My Model Explanation 
+                            <textarea name="Text1" cols="40" rows="5"></textarea>
+                        </label>
+                    </fieldset>
+                    <!-- #endregion 3D Printing Order Form Section -->
+                    
+                    <p class="order-total" aria-live="polite">
+                        Total: <output id="orderTotal"></output>
+                    </p>
+                    <button type="submit">Submit Order Request</button>
+                </form>
+            </div>
+
+            <section class="filters">
+                <input type="text" id="search" placeholder="Search games..." />
+                <select id="category">
+                    <option value="">Service Type</option>
+                    <option value="Website">Website Examples</option>
+                    <option value="2D Games">(2D) Games Examples</option>
+                    <option value="3D Games">(3D) Games Examples</option>
+                </select>
+            </section>
+
+            <section class="gallery-grid" id="galleryGrid">
+    	        <!-- Cards will be injected here -->
+  	        </section>
+
+            <!-- #region Website Services Modal -->
+
+            <div id="websiteModal" class="services-modal">
+                <div class="modal-content">
+                    <span id="closeWebsiteModal" class="close">&times;</span>
+
+                    <img src="images/Website Modal/Website Modal Banner.png" alt="Website Design" class="modal-banner"> <!-- Banner Image -->
+                    <h2>What are Websites?</h2>
+                    <p>Websites are online platforms which display information and content to users, allowing you to spread a message or promote products and services. </p>
+                    
+                    <!-- #region Our Offers -->
+                    <h2>Our Offers</h2>
+
+                    <div class="modal-row">
+                        <div class="modal-column">
+                            <div class="modal-card">
+                                <img src="images/Website Modal/Starter Pack Img.png" alt="Starter pack" data-price-id="websiteStarter">
+
+                                <h4>What's Included?</h4>
+
+                                <li>One-page responsive website</li>
+                                <li>Business introduction and services</li>
+                                <li>Contact details and enquiry links</li>
+                                <li>Social media links</li>
+                                <li>Basic search engine friendly page structure</li>
+                                <li>2 revisions</li>
+                                <li>Deployment assistance</li>
+                                
+                                <p>Want anything else added to you pack, check the Extras. If it's not their don't hesitate to contact me.</p>
+                            </div>
+                        </div>
+                    
+                        <div class="modal-column">
+                            <div class="modal-card">
+                                <img src="images/Website Modal/Basic Pack Img.png" alt="Basic pack" data-price-id="websiteBasic">
+
+                                <h4>What's Included?</h4>
+
+                                <li>Everything from the "Starter Pack", including the following;</li>
+                                <li>4 Additional Responsive Pages (5 Total)</li>
+                                <li>3 Additional Revisions (5 Total)</li>
+                                <li>1-2 Slideshows, displaying services / products</li>
+                                <li>And a contact form</li>
+
+                                <p>Want anything else added to you pack, check the Extras. If it's not their don't hesitate to contact me.</p>
+                            </div>
+                        </div>
+
+                        <div class="modal-column">
+                            <div class="modal-card">
+                                <img src="images/Website Modal/Ultimate Pack Img.png" alt="Ultimate pack" data-price-id="websiteUltimate">
+
+                                <h4>What's Included?</h4>
+
+                                <li>Anything is possible, you have full control over everything, including the following; </li>
+                                <li>Amount of Pages</li>
+                                <li>Amount of Revisions</li>
+                                <li>Amount of Slideshows, Images, Videos and Audio Files</li>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- #endregion Our Offers -->
+
+                    <!-- #region Extras -->
+                    <h2>Extras</h2>
+
+                    <div class="modal-row">
+                        <div class="modal-column">
+                            <div class="modal-card">
+                                <img src="images/Website Modal/Additional Page.png" alt="Additional page" data-price-id="websiteAdditionalPage">
+                            </div>
+                        </div>
+                    
+                        <div class="modal-column">
+                            <div class="modal-card">
+                                <img src="images/Website Modal/Additional Revision.png" alt="Additional revision" data-price-id="websiteAdditionalRevision">
+                            </div>
+                        </div>
+
+                        <div class="modal-column">
+                            <div class="modal-card">
+                                <img src="images/Website Modal/Gallery Section.png" alt="Gallery section" data-price-id="websiteGallery">
+                            </div>
+                        </div>
+
+                        <div class="modal-column">
+                            <div class="modal-card">
+                                <img src="images/Website Modal/Monthly Maintenance.png" alt="Monthly maintenance" data-price-id="websiteMaintenance">
+                            </div>
+                        </div>
+                    </div>
+                    <!-- #endregion Extras -->
+                </div>
+            </div>
+
+            <!-- #endregion Website Services Modal -->
+        
+            <!-- #region Game-Dev Services Modal -->
+
+            <div id="gameDevModal" class="services-modal">
+                <div class="modal-content">
+                    <span id="closeGameDevModal" class="close">&times;</span>
+
+                    <img src="images/Game-Dev Modal/Game Dev Modal Banner.png" alt="Game-Dev Services" class="modal-banner"> <!-- Banner Image -->
+                    
+                    <!-- #region Our Offers -->
+                    <h2>Our Offers</h2>
+
+                    <div class="modal-row">
+                        <div class="modal-column">
+                            <div class="modal-card">
+                                <img src="images/Game-Dev Modal/The Fixer Img.png" alt="The Fixer - estimated delivery: 1-3 days" data-price-id="gameFixer">
+
+                                <h4>What's Included?</h4>
+
+                                <li>I'll fix up to 2 small C# / Unity bugs</li>
+                                <li>Resolve basic gameplay logic issues</li>
+                                <li>Investigate errors and unexpected behaviour</li>
+                                <li>Provide corrected scripts</li>
+                                <li>And explain what was causing the problem</li>
+                            </div>
+                        </div>
+                    
+                        <div class="modal-column">
+                            <div class="modal-card">
+                                <img src="images/Game-Dev Modal/The Builder Img.png" alt="The Builder - estimated delivery: 3-7 days" data-price-id="gameBuilder">
+
+                                <h4>What's Included?</h4>
+
+                                <li>One custom gameplay mechanic</li>
+                                <li>C# Scripting and implementation</li>
+                                <li>Basic UI integration when required</li>
+                                <li>Testing and debugging</li>
+                                <li>Clean, organised and commented code</li>
+                                <li>One Revision</li>
+
+                                <h4>Examples</h4>
+
+                                <li>Player health and damage systems</li>
+                                <li>Inventory and item management</li>
+                                <li>Interactable objects</li>
+                                <li>Character movement mechanics</li>
+                                <li>Collectibles and currency systems</li>
+                                <li>Basic enemy AI</li>
+                            </div>
+                        </div>
+
+                        <div class="modal-column">
+                            <div class="modal-card">
+                                <img src="images/Game-Dev Modal/The Creator Img.png" alt="The Creator - estimated delivery: 1-2 weeks" data-price-id="gameCreator">
+
+                                <h4>What's Included?</h4>
+
+                                <li>One larger gameplay feature or small prototype</li>
+                                <li>Multiple interconnected C# scripts</li>
+                                <li>UI and gameplay integration</li>
+                                <li>Basic animations or VFX integration where appropriate</li>
+                                <li>Testing and debugging</li>
+                                <li>Documentation explaining implementation</li>
+                                <li>Up to 2 revisions</li>
+
+                                <h4>Examples</h4>
+
+                                <li>Character Controllers (First or Third)</li>
+                                <li>Complete basic inventory systems</li>
+                                <li>Enemy health and combat systems</li>
+                                <li>Interactive dialogue system</li>
+                                <li>Basic quest objectives and progressions</li>
+                                <li>Small playable gameplay prototype</li>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- #endregion Our Offers -->
+
+                     <!-- #region Mini Packages -->
+                    <h2>Mini Packages</h2>
+
+                    <div class="modal-row">
+                        <div class="modal-column">
+                            <div class="modal-card">
+                                <img src="images/Game-Dev Modal/Small Script Modifications.png" alt="Small script modifications" data-price-id="gameSmallScript">
+
+                                <h4>What's Included?</h4>
+
+                                <li>The choice is yours, I can;</li>
+                                <li>Optimise a script</li>
+                                <li>Find the bug / typo on the script</li>
+                            </div>
+                        </div>
+
+                        <div class="modal-column">
+                            <div class="modal-card">
+                                <img src="images/Game-Dev Modal/Unity UI Implementations.png" alt="Unity UI implementation" data-price-id="gameUnityUI">
+
+                                <h4>What's Included?</h4>
+
+                                <li>I will assist UI implementation</li>
+                                <li>I can show you how to do it</li>
+                                <li>Or I can straight up do it for you</li>
+                            </div>
+                        </div>
+
+                        <div class="modal-column">
+                            <div class="modal-card">
+                                <img src="images/Game-Dev Modal/Health System Implementation.png" alt="Health system implementation" data-price-id="gameHealthSystem">
+
+                                <h4>What's Included?</h4>
+
+                                <li>I will build a complete modular health system, with basic UI elements</li>
+                            </div>
+                        </div>
+
+                        <div class="modal-column">
+                            <div class="modal-card">
+                                <img src="images/Game-Dev Modal/Inventory System Implementation.png" alt="Inventory system implementation" data-price-id="gameInventory">
+
+                                <h4>What's Included?</h4>
+
+                                <li>I will build an inventory system, with basic UI elements</li>
+                            </div>
+                        </div>
+
+                        <div class="modal-column">
+                            <div class="modal-card">
+                                <img src="images/Game-Dev Modal/Character Controller.png" alt="Character controller" data-price-id="gameCharacterController">
+
+                                <h4>What's Included?</h4>
+
+                                <li>I will build either a Third, First or Top-down character controller for your game</li>
+                            </div>
+                        </div>
+
+                        <div class="modal-column">
+                            <div class="modal-card">
+                                <img src="images/Game-Dev Modal/Basic Enemy AI.png" alt="Basic enemy AI" data-price-id="gameEnemyAI">
+
+                                <h4>What's Included?</h4>
+
+                                <li>I will build a basic enemy AI tailored to your game</li>
+                            </div>
+                        </div>
+
+                        <div class="modal-column">
+                            <div class="modal-card">
+                                <img src="images/Game-Dev Modal/Save - Load Functionality.png" alt="Save and load functionality" data-price-id="gameSaveLoad">
+
+                                <h4>What's Included?</h4>
+
+                                <li>I will build a Save / Load system for your game</li>
+                                <li>I will provide documentation / recorded evidence of how to add to the system so you can expand the save | load features</li>
+
+                            </div>
+                        </div>
+
+                        <div class="modal-column">
+                            <div class="modal-card">
+                                <img src="images/Game-Dev Modal/Gameplay Mechanic Implementation.png" alt="Gameplay mechanic implementation" data-price-id="gameGameplayMechanic">
+
+                                <h4>What's Included?</h4>
+
+                                <li>I will build 1 specific gameplay feature for your game</li>
+                            </div>
+                        </div>
+
+                        <div class="modal-column">
+                            <div class="modal-card">
+                                <img src="images/Game-Dev Modal/Project Debugging Session.png" alt="Project debugging session" data-price-id="gameProjectDebugging">
+
+                                <h4>What's Included?</h4>
+
+                                <li>I will play your game</li>
+                                <li>I will test your game</li>
+                                <li>I will provide detailed feedback, with potential steps to resolve any issues</li>
+                            </div>
+                        </div>
+
+                        <div class="modal-column">
+                            <div class="modal-card">
+                                <img src="images/Game-Dev Modal/Code Review and Optimisation.png" alt="Code review and optimisation" data-price-id="gameCodeReview">
+                                
+                                <h4>What's Included?</h4>
+
+                                <li>I will review your code and optimise it where necessary</li>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- #endregion Mini Packages -->
+                </div>
+            </div>
+
+            <!-- #endregion Website Services Modal -->
+            
+            <!-- #region 3D Printing Services Modal -->
+
+            <div id="printingModal" class="services-modal">
+                <div class="modal-content">
+                    <span id="closePrintingModal" class="close">&times;</span>
+
+                    <img src="images/Game-Dev Modal/Game Dev Modal Banner.png" alt="Game-Dev Services" class="modal-banner"> <!-- Banner Image -->
+                    
+                    <!-- #region Our Offers -->
+                    <h2>Our Products</h2>
+
+                    <div class="modal-row">
+                        <div class="modal-column">
+                            <div class="modal-card">
+                                <img src="images/Printing Modal/Print My Model.png" alt="Print My Modal" data-price-id="">
+
+                                <h4>What's Included?</h4>
+
+                                <li>Have an STL or 3MF file? Send it over and receive a free quotation.</li>
+                            </div>
+                        </div>
+                    
+                        <div class="modal-column">
+                            <div class="modal-card">
+                                <img src="images/Printing Modal/Customise My Model.png" alt="Customise My Modal" data-price-id="gameBuilder">
+
+                                <h4>What's Included?</h4>
+
+                                <li>Have an existing model that needs changing? I can help customise it.</li>
+
+                            </div>
+                        </div>
+
+                        <div class="modal-column">
+                            <div class="modal-card">
+                                <img src="images/Printing Modal/Create My Model.png" alt="Create My Modal" data-price-id="gameCreator">
+
+                                <h4>What's Included?</h4>
+
+                                <li>Have an idea but no 3D model? I can help bring it to life.</li>
+
+                            </div>
+                        </div>
+                    </div>
+                    <!-- #endregion Our Offers -->
+
+                    <!-- #region Extras -->
+                    <h2>Our Pre-Made Products</h2>
+
+                    <div class="modal-row">
+                        <!--<div class="modal-column">
+                            <div class="modal-card">
+                                <img src="images/Game-Dev Modal/Small Script Modifications.png" alt="Small script modifications" data-price-id="gameSmallScript">
+                            </div>
+                        </div>-->
+
+                        <h1>Pre-Made Prints Coming Soon</h1>
+                    </div>
+                    <!-- #endregion Extras -->
+                </div>
+            </div>
+
+            <!-- #endregion 3D Printing Services Modal -->
+
+        </div>
+
+        <!-- #region Script Links -->
+
+        <script src="js/modal.js"></script>
+        <script src="js/pricing.js"></script>
+        <script src="js/gallery.js"></script>
+        <script src="js/form.js"></script>
+
+        <!-- #endregion Script Links -->
+    
+    
+    </body>
+</html>
